@@ -16,7 +16,7 @@ class Guess: RenderableEntity {
     var colorVal = "black"
 
     init() {
-        //var rect = Rect(topLeft:Point(x:base, y:10), size:Size(width:300, height:(length)))
+        //var rect = Rect(topLeft:Point(x:10, y:10), size:Size(width:300, height:300))
         //rectangle = Rectangle(rect:rect, fillMode:.fillAndStroke)
         text = Text(location:Point(x:50, y:50), text:"Hello, World!")
         // Using a meaningful name can be helpful for debugging
@@ -25,8 +25,11 @@ class Guess: RenderableEntity {
 
     override func render(canvas:Canvas) {
         
-        //var rect = Rect(topLeft:Point(x:rectX, y:rectY), size:Size(width:50, height:50))
+        //let rect = Rect(topLeft:Point(x:750, y:0), size:Size(width:1000, height:400))
         //rectangle = Rectangle(rect:rect, fillMode:.fillAndStroke)
+        //let fillStyle1 = FillStyle(color:Color(.white))
+        //let strokeStyle1  = StrokeStyle(color:Color(.white))
+
         if colorVal == "black" {
             fillStyle = FillStyle(color:Color(.black))
         }
@@ -39,6 +42,7 @@ class Guess: RenderableEntity {
         else {
             fillStyle = FillStyle(color:Color(.purple))
         }
+        //fillStyle = FillStyle(color:Color(.black))
         //let fillStyle = FillStyle(color:Color(.white))
         let lineWidth = LineWidth(width:3)
         //canvas.render(strokeStyle, fillStyle, lineWidth, rectangle)
@@ -46,7 +50,7 @@ class Guess: RenderableEntity {
         text.font = font
         canvas.render(fillStyle, lineWidth, text)
         
-        
+        //canvas.render(fillStyle1, strokeStyle1, rectangle)
     }
 
     func move(x: Int, y: Int, text: String, style: String, color: String) {

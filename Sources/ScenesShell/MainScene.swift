@@ -6,6 +6,7 @@ import Scenes
    A Scene is comprised of one or more Layers.
    Layers are generally added in the constructor.
  */
+
 class MainScene : Scene {
 
     /* Scenes typically include one or more Layers.
@@ -14,7 +15,7 @@ class MainScene : Scene {
        and one for the foreground.
      */
     let backgroundLayer = BackgroundLayer()
-    let interactionLayer = InteractionLayer()
+    let interactionLayer = InteractionLayer(words: ["jacuzzi",  "dog", "bird"], chosenWord: ["jacuzzi", "dog", "bird"].randomElement()!, userLives: 12)
     let foregroundLayer = ForegroundLayer()
 
     init() {
